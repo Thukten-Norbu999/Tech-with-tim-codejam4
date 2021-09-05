@@ -1,0 +1,127 @@
+body{
+    background:linear-gradient(blue, rgba(9, 243, 204, 0.87))
+}
+.container{
+    position:relative;
+    background: linear-gradient(45deg, white, grey); 
+    margin-top:150px;
+}
+
+.button{
+    cursor: pointer;
+    border:0;
+    color:rgb(0, 0, 0);
+    background:rgb(255, 255, 255);
+    padding:.5cm,.5cm;
+    position: relative;
+    z-index: 1;
+}
+.button + .button{
+    margin-left: 1em;
+}
+.button::after{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(blue, skyblue);
+    z-index: -1;
+    transition: transform 200ms ease-in;
+}
+
+.button-three::after{
+    transform: scaleX(0);
+    transform-origin: right;
+}
+.button-three:hover::after{
+    transform:scaleX(1);
+    transform-origin: left;   
+}
+.button-two::after{
+    transform:scaleX(0);
+    transform-origin: left;
+}
+.button-two:hover::after{
+    transform:scaleX(1);
+    transform-origin:right;
+}
+.button-one:after{
+    transform:scaleY(0);
+    transform-origin: top;
+}
+.button-one:hover::after{
+    transform:scaleY(1);
+    transform-origin: bottom;
+}
+
+
+.box{
+    padding:30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;
+}
+.box > *{
+
+    flex: 1 1 45%;
+}
+
+.container-asia{
+    padding:0,20px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/Map_of_Asia.png);
+    background-size: cover;
+    transition: transform 200ms ease-in;
+    z-index: 0;
+}
+.container-asia:hover{
+    transform:scale(1.05);
+    transform-origin:center;
+    box-shadow: 2px 2px 2px black;
+    z-index: 1;
+}
+
+.container-europe{
+    transition: transform 200ms ease-in;
+    background-image: url(https://image.freepik.com/free-vector/map-europe-with-countries-colors_23-2147781716.jpg);
+    background-size: cover;
+}
+.container-europe:hover{
+    transform:scale(1.05);
+    transform-origin:center;
+    box-shadow: 2px 2px 2px black;
+    z-index: 1;
+}
+
+.container-na{
+    background-image: url(https://assets.ltkcontent.com/images/102958/countries-of-north-america_0066f46bde.jpg);
+    background-size:cover;
+    transition: transform 200ms ease-in-out;
+}
+
+.container-na:hover{
+    transform:scale(1.05);
+    transform-origin:center;
+    box-shadow: 2px 2px 2px black;
+    z-index: 1;
+}
+
+.container-other{
+    background: url(https://lh4.googleusercontent.com/proxy/Iyk3piCE-Eei1TzSCSansmqaPLow2ATH2jIH71p1Jzfg30d0_fZnRvbA7z9G6OKwyGjmHZfHkgjGzUmJv7WY1CrCOAzJZYJyNgobXeVZBTB7QiPSW0d0neHOU4ubpy0eC4B7WUy7zHF4ZMhV52suHYfVM2utT9foD7owtijaCLIJtotSdcknRQft_eUIl6e3-h9S1xRnYxYVN-veGpFhje8mQdAADcR5TexTZg=s0-d);
+    background-size: cover;
+    
+    transition: transform 200ms ease-in-out;
+}
+.container-other:hover{
+    transform:scale(1.05);
+    transform-origin: center;
+    box-shadow: 2px 2px 2px black;
+    z-index: 1;
+
+}
+
+.text{
+    font-family:'Times New Roman', Times, serif;
+}

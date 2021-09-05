@@ -1,0 +1,10 @@
+links:
+other than covid:
+https://www.nimh.nih.gov/health/statistics/suicide?fbclid=IwAR25afx5cuxRtuYJX4H4FC1xhh-oy7bBUnA_0lI0H_h0RSXF7CHsPdJEK5Q
+
+
+
+covid:
+https://www.nytimes.com/interactive/2021/us/covid-cases.html
+
+

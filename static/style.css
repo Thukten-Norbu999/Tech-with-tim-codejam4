@@ -1,0 +1,90 @@
+body{
+    background-color: skyblue;
+}
+.container{
+    position:relative;
+    background-color: white;
+    margin: 500px,500px;
+    display: flexbox;
+    
+}
+
+.button{
+    cursor: pointer;
+    border:0;
+    color:rgb(0, 0, 0);
+    background:rgb(255, 255, 255);
+    padding:.5cm,.5cm;
+    position: relative;
+    z-index: 1;
+}
+.button + .button{
+    margin-left: 1em;
+}
+.button::after{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(27, 223, 164, 0.5);
+    z-index: -1;
+    transition: transform 200ms ease-in;
+}
+
+.button-three::after{
+    transform: scaleX(0);
+    transform-origin: right;
+}
+.button-three:hover::after{
+    transform:scaleX(1);
+    transform-origin: left;   
+}
+.button-two::after{
+    transform:scaleX(0);
+    transform-origin: left;
+}
+.button-two:hover::after{
+    transform:scaleX(1);
+    transform-origin:right;
+}
+.button-one:after{
+    transform:scaleY(0);
+    transform-origin: top;
+}
+.button-one:hover::after{
+    transform:scaleY(1);
+    transform-origin: bottom;
+}
+
+
+.container-box{
+    padding:30px;
+    background-color: black;
+}
+.container-asia{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a7/Map_of_Asia.png);
+    background-size: cover;
+
+   /* background-blend-mode: multiply;*/
+}
+.container-europe{
+    background-image: url(https://image.freepik.com/free-vector/map-europe-with-countries-colors_23-2147781716.jpg);
+    background-size: cover;
+}
+.container1{
+    position:relative;
+    width:100%;
+    height:100%;
+
+}
+
+.pic{
+    width: 300px;
+    height:300px;
+}
+.text{
+    font-family:'Times New Roman', Times, serif;
+}
